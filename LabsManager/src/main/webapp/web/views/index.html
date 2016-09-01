@@ -1,0 +1,421 @@
+<!--
+Author: Joginder Malik
+-->
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="baseURL" value="${pageContext.request.contextPath}" />
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Naseeb Lab | Home :: </title>
+<link href="web/resources/frameworks/bootstrap-3.3.1/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="web/resources/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Sciencelab Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="web/resources/frameworks/jquery-2.1.3/jquery-2.1.3.js"></script>
+<script src="web/resources/js/modernizr.custom.97074.js"></script>
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="web/resources/js/move-top.js"></script>
+<script type="text/javascript" src="web/resources/js/easing.js"></script>
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+<!---End-smoth-scrolling---->
+<!--script-->
+<script src="web/resources/js/jquery.chocolat.js"></script>
+		<link rel="stylesheet" href="web/resources/css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+		<!--light-box-files -->
+		<script type="text/javascript" charset="utf-8">
+		$(function() {
+			$('.gallery a').Chocolat();
+		});
+		</script>
+<!--script-->
+
+</head>
+<body>
+	<div class="header" id="home">
+		<div class="header-top">
+			<div class="container">
+			   <div class="logo">
+			  <!--   <img src="images/lab.jpg" height="50px" width="400px" alt="" /> -->
+				 <a href="${baseURL}/">Naseeb<span>lab</span></a> 
+				</div>
+				<div class="top-menu">
+					<span class="menu"><img src="web/resources/images/nav.png" alt=""/> </span>
+						<ul>
+						<li><a href="#home" class="active scroll">home</a></li>
+						<li><a href="#aboutus" class="scroll">about us</a></li>
+						<li><a href="#services" class="scroll">services</a></li>
+						<li><a href="#gallery" class="scroll">gallery</a></li>
+						<li><a href="#team" class="scroll">team</a></li>
+						<li><a href="#blog" class="scroll">blog</a></li>
+						<li><a href="#contact" class="scroll">contact</a></li>
+						<li><a href="#" id="viewReport">View Report</a></li>
+						<li><a href="${baseURL}/bookTest" id="bookTest">Book a Test</a></li>
+						<li><a href="${baseURL}/login">Login</a></li>
+					</ul>
+				</div>
+					 <!--script-nav-->
+						 <script>
+						 $("span.menu").click(function(){
+						 $(".top-menu ul").slideToggle("slow" , function(){
+						 });
+						 });
+						 </script>
+		 
+						<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+			<div class="about-section" id="aboutus">
+				<div class="container">
+					<h3>welcome to the Naseeb Lab !</h3>
+					    <div class="about-grids">
+							<div class="col-md-4 about-grid">
+								<img src="web/resources/images/p1.jpg" class="img-responsive" alt="">
+								<h4>Header1</h4>
+								<p>Text area for warriting text.Text area for warriting text.Text area for warriting text.</p>
+							</div>
+							<div class="col-md-4 about-grid">
+								<img src="web/resources/images/p2.jpg"  class="img-responsive" alt="">
+								<h4>Header2</h4>
+								<p>Text area for warriting text.Text area for warriting text.Text area for warriting text.</p>
+							</div>
+							<div class="col-md-4 about-grid">
+								<img src="web/resources/images/p3.jpg"  class="img-responsive" alt="">
+								<h4>Header3</h4>
+								<p>Text area for warriting text.Text area for warriting text.Text area for warriting text.</p>
+							</div>
+								<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+					<div class="services-section" id="services">
+						<div class="container">
+							<h3>LABORATORY SERVICES AND TESTS</h3>
+								<div class="services-grids">
+							<div class="col-md-6 service-leftgrid">
+								<div class="service1">
+									<div class="left-grid1">
+										<span class="glyphicon glyphicon-glass" aria-hidden="true"></span>
+									</div>
+									<div class="left-grid2">
+										<h4>Header1</h4>
+										<p>Text area for warriting text.Text area for warriting text.Text area for warriting text.</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="service2">
+									<div class="left-grid1">
+										<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+									</div>
+									<div class="left-grid2">
+											<h4>Header2</h4>
+											<p>Text area for warriting text.Text area for warriting text.Text area for warriting text.</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="service1">
+									<div class="left-grid1">
+										<span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+									</div>
+									<div class="left-grid2">
+										<h4>Header3</h4>
+								<p>Text area for warriting text.Text area for warriting text.Text area for warriting text.</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="col-md-6 service-rightgrid">
+								<div class="service1">
+									<div class="left-grid1">
+										<span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>								
+										</div>
+									<div class="left-grid2">
+										<h4>Header1</h4>
+								<p>Text area for warriting text.Text area for warriting text.Text area for warriting text.</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="service2">
+									<div class="left-grid1">
+										<span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>							
+									</div>
+									<div class="left-grid2">
+										<h4>Header2</h4>
+								<p>Text area for warriting text.Text area for warriting text.Text area for warriting text.</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="service1">
+									<div class="left-grid1">
+										<span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
+									</div>
+									<div class="left-grid2">
+										<h4>Header3</h4>
+								<p>Text area for warriting text.Text area for warriting text.Text area for warriting text.</p>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>
+		<!--gallery-->
+	<div class="gallery" id="gallery">
+		<div class="container">
+			<h3>gallery</h3>
+			<div class="gallery-grids">
+			<section>
+				<ul id="da-thumbs" class="da-thumbs">
+					<li>
+						<a href="web/resources/images/g1.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+							<img src="web/resources/images/g1.jpg" alt="" />
+							<div>
+								<h5>project</h5>
+								<span>Preiview in Full Screan </span>
+							</div> 	
+						</a>
+					</li>
+					<li>
+						<a href="web/resources/images/g2.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+							<img src="web/resources/images/g2.jpg" alt="" />
+							<div>
+								<h5>project</h5>
+								<span>Preiview in Full Screan </span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="web/resources/images/g3.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+							<img src="web/resources/images/g3.jpg" alt="" />
+							<div>
+								<h5>project</h5>
+								<span>Preiview in Full Screan </span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="web/resources/images/g4.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+							<img src="web/resources/images/g4.jpg" alt="" />
+							<div>
+								<h5>project</h5>
+								<span>Preiview in Full Screan </span>
+							</div>
+						</a>
+					</li>
+					<li>	
+						<a href="web/resources/images/g5.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+							<img src="web/resources/images/g5.jpg" alt="" />
+							<div>
+								<h5>project</h5>
+								<span>Preiview in Full Screan </span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="web/resources/images/g6.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+							<img src="web/resources/images/g6.jpg" alt="" />
+							<div>
+								<h5>project</h5>
+								<span>Preiview in Full Screan </span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="web/resources/images/g7.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+							<img src="web/resources/images/g7.jpg" alt="" />
+							<div>
+								<h5>project</h5>
+								<span>Preiview in Full Screan </span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="web/resources/images/g8.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+							<img src="web/resources/images/g8.jpg" alt="" />
+							<div>
+								<h5>project</h5>
+								<span>Preiview in Full Screan </span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="web/resources/images/g9.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
+							<img src="web/resources/images/g9.jpg" alt="" />
+							<div>
+								<h5>project</h5>
+								<span>Preiview in Full Screan </span>
+							</div>
+						</a>
+					</li>
+					<div class="clearfix"> </div>
+				</ul>
+			</section>
+			<script type="text/javascript" src="web/resources/js/jquery.hoverdir.js"></script>	
+		<script type="text/javascript">
+			$(function() {
+			
+				$(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
+
+			});
+		</script>
+        </div>
+	</div>
+</div>
+<!--//gallery-->
+<!--team-->
+			<div class="team" id="team">
+				<div class="container">
+				<h3>Our Team Members</h3>
+				<div class="team-info">
+					<div class="col-md-3 team-grids">
+						<a href="#">
+							<img class="img-responsive" src="web/resources/images/t1.jpg" alt="">
+							<div class="captn">
+								<h4>Header1</h4>
+								<p>This is the text area where u can insert the datalist</p>
+							</div>
+						</a>
+					</div>					
+					<div class="col-md-3 team-grids">
+						<a href="#">
+							<img class="img-responsive" src="web/resources/images/t2.jpg" alt="">
+							<div class="captn">
+								<h4>Header2</h4>
+								<p>This is the text area where u can insert the datalist</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 team-grids">
+						<a href="#">
+							<img class="img-responsive" src="web/resources/images/t3.jpg" alt="">
+							<div class="captn">
+								<h4>Header3</h4>
+								<p>This is the text area where u can insert the datalist</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 team-grids">
+						<a href="#">
+							<img class="img-responsive" src="web/resources/images/t4.jpg" alt="">
+							<div class="captn">
+								<h4>Header4</h4>
+								<p>This is the text area where u can insert the datalist</p>
+							</div>
+						</a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			</div>
+			<!--//team-->
+
+<!--start-blog-->
+		<div id="blog" class="blog-section">
+		   <div class="container">
+		         <h3>Blog</h3>
+				 <div class="blog">
+				   <div class="col-md-4 blog-text">
+					   <h5>THU 24 May, 2016</h5>
+					  <h4><a href="single.html">Header For Blog Inseration</a></h4>
+					   <p>Welcome to Naseeb lab. My name is Ramana working as Dignostic </p>
+				   </div>
+					<div class="col-md-8 welcome-img">
+					 <a href="single.html" class="mask"><img src="web/resources/images/b2.jpg" alt="image" class="img-responsive zoom-img"></a>
+					</div>
+				   <div class="clearfix"> </div>
+			   </div>
+			    <div class="blog">
+				 <div class="col-md-4 blog-text two">
+					   <h5>THU 24 May, 2016</h5>
+					  <h4><a href="single.html">Header For Blog Inseration</a></h4>
+					   <p>my name is vikas . working in nasseb lab and feel very good .</p>
+				   </div>
+					<div class="col-md-8 blog-img two">
+					 <a href="single.html" class="mask"><img src="web/resources/images/b3.jpg" alt="image" class="img-responsive zoom-img"></a>
+					</div>
+				   <div class="clearfix"> </div>
+			   </div> 
+			    <div class="blog">
+				   <div class="col-md-4 blog-text">
+					   <h5>THU 24 May, 2016</h5>
+					   <h4><a href="single.html">Header For Blog Inseration</a></h4>
+					   <p>In naseeb lab all equipment and service and digital working is there</p>
+				   </div>
+					<div class="col-md-8 welcome-img">
+					 <a href="single.html" class="mask"><img src="web/resources/images/b1.jpg" alt="image" class="img-responsive zoom-img"></a>
+					</div>
+				   <div class="clearfix"> </div>
+			   </div>
+		</div>
+	</div>
+	<div class="contact-section" id="contact">
+				<div class="container">
+				<div class="contact-header">
+					<h3>contact us</h3>
+					</div>
+						<div class="contact-grid">
+						<div class="col-md-6 contactdetails-grid">
+						<h4>contact form</h4>
+               				
+							<h5>name <span>*</span></h5>
+               					<form>
+								<input type="text">
+               						<h5>email address <span>*</span></h5>
+               							<input type="text">
+               								<h5>subject <span>*</span></h5>
+               									<input type="text">
+               										<h5>message <span>*</span></h5>
+               											<textarea> </textarea>
+             												<input type="submit" value="send">
+																</form>
+               				</div>
+               			<div class="col-md-6 contactdetails-grid1">
+               				<div class="address">
+               				<h4>Address</h4>
+               			  
+							   <p>22-56-2-9 Kangra, Himachal,</p>
+								  <p>India</p>
+				   					<p>Phone:(+91) 222 666 444</p>
+				   						
+				 	 						<p>Email: <a href="mailto:info@naseeblabs.com.com">info@naseeblabs.com</a></p>
+				   								<p>Follow on: <a href="#">Facebook</a> , <a href="#">Twitter</a></p>
+				  							</div>
+				  							<div class="google-map">
+               				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.651735969928!2d76.31761731469194!3d32.21361371980613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b511e66fabe19%3A0x7286efc163ee8563!2sNaseeb+Laboratories!5e0!3m2!1sen!2sin!4v1464174147117" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+               			</div>
+				   						</div>
+										<div class="clearfix"> </div>
+               					</div>
+								</div>
+							</div>
+
+			<div class="footer-section">
+						<div class="container">
+							<div class="footer-bottom">
+						<p>Copyright &copy; 2016 <span>NaseebLabs.</span> All rights reserved | Design by <a href="#">Joginder Malik</a></p>
+									</div>
+							<script type="text/javascript">
+						$(document).ready(function() {
+							
+							$().UItoTop({ easingType: 'easeOutQuart' });
+							
+						});
+					</script>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+				</div>
+			</div>
+</body>
+</html>

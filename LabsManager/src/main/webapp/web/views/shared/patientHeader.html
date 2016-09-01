@@ -1,0 +1,37 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
+<c:set var="baseURL" value="${pageContext.request.contextPath}" />
+
+<div class="navbar-collapse collapse navbar-warning-collapse">
+       	       <ul class="nav navbar-nav navbar-left">
+            		<li><a href="${baseURL}/">Home</a></li>
+        		</ul>
+       	        <ul class="nav navbar-nav navbar-left">
+            		<li><a href="javascript:showWorklistPage();">Edit Profile</a></li>
+        		</ul>
+        		
+       	     <!--    <ul class="nav navbar-nav navbar-left">
+        			<li class="dropdown" id="menusID">
+        				<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Patient <b class="caret"></b></a>
+		                <ul class="dropdown-menu">
+		                	<li><a href="javascript:showRegisterPatientPage();">Register Patient</a></li>
+		                	<li><a href="javascript:abc();">Send Email</a></li>
+		                    <li><a href="javascript:abc();">Settings</a></li>
+		                </ul>
+            		</li>
+            	
+            		<li>
+            		
+            		</li>
+        		</ul>
+        		<ul class="nav navbar-nav navbar-left">
+            		<li><a href="javascript:updateTestsPage();">Update Tests</a></li>
+        		</ul>
+        	 -->
+			<a href="#" class="btn btn-info btn-sm" style="float:right;">
+          		<span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+        	</a>        		
+    </div>
+<!-- <script src="web/views/shared/header.js" type="application/javascript"></script> -->
+<script src="web/views/api/navigation.js" type="application/javascript"></script>

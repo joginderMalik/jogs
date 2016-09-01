@@ -1,0 +1,58 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
+<c:set var="baseURL" value="${pageContext.request.contextPath}" />
+
+<div class="navbar-collapse collapse navbar-warning-collapse">
+       	        <sec:authorize access="isAuthenticated()">
+       	        <ul class="nav navbar-nav navbar-left">
+            		<li><a href="javascript:showWorklistPage();">WorkList</a></li>
+        		</ul>
+        		</sec:authorize>
+        		
+        		<sec:authorize access="hasRole('ROLE_ADMIN')">
+        		<ul class="nav navbar-nav navbar-left">
+            		<li><a href="javascript:showWorklistPage();">Dashboard</a></li>
+        		</ul>
+        		</sec:authorize>
+        		
+       	        <ul class="nav navbar-nav navbar-left">
+        			<li class="dropdown" id="menusID">
+        				<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Patient <b class="caret"></b></a>
+		                <ul class="dropdown-menu">
+		                	<li><a href="javascript:showRegisterPatientPage();">Register Patient</a></li>
+		                	<li><a href="javascript:abc();">Send Email</a></li>
+		                    <li><a href="javascript:abc();">Settings</a></li>
+		                </ul>
+            		</li>
+            	</ul>
+        		
+        		<sec:authorize access="hasRole('ROLE_ADMIN')">
+        		<ul class="nav navbar-nav navbar-left">
+            		<li><a href="javascript:updateTestsPage();">Update Tests</a></li>
+        		</ul>
+        		</sec:authorize>
+        		
+        		<sec:authorize access="isAuthenticated()">
+        		<ul class="nav navbar-nav navbar-right">
+            		<li><a href="${baseURL}/j_spring_security_logout">(<span id="targetUsername">Welcome, ${pageContext.request.userPrincipal.name}</span>) | Logout</a>
+            		</li>
+        		</ul>
+        		</sec:authorize>
+        		
+        	 <sec:authorize access="hasRole('ROLE_ADMIN')">
+        		<ul class="nav navbar-nav navbar-right">
+            		<li><a href="javascript:showAdminPanelPage()">Admin Panel</a></li>
+        		</ul>
+        		<ul class="nav navbar-nav navbar-right">
+        			<li class="dropdown" id="staffManagement">
+        			<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Staff Management <b class="caret"></b></a>
+        				<ul class="dropdown-menu">
+            			<li><a href="javascript:showRegisterStaffPage();">Register Staff</a></li>
+            			<li><a href="javascript:showRegisterPatientPage();">Manage Staff</a></li>
+            			</ul>
+            		</li>
+        		</ul>
+        	</sec:authorize>				
+    </div>
+    <script src="web/views/shared/header.js" type="application/javascript"></script>

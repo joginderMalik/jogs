@@ -1,0 +1,114 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Labs Manager</title>
+    
+    <!-- Bootstrap -->
+    <link href="web/resources/frameworks/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="web/resources/frameworks/material/css/material.min.css" rel="stylesheet">
+    
+    <link href="web/resources/frameworks/material/css/ripples.min.css" rel="stylesheet">
+    <link href="web/resources/frameworks/material/css/material-wfont.min.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
+    <script src="web/views/api/navigation.js"></script>
+
+</head>
+<body>
+    <div style="container: documents">
+        <div style="
+                    -moz-box-shadow: 0px 3px 8px rgb(100,100,100);
+                    -webkit-box-shadow: 0px 3px 8px rgb(100,100,100);
+                    box-shadow: 0px 3px 8px rgb(100,100,100);
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                    margin-left:auto;
+                    margin-right: auto;
+                    width:90%;
+                    min-width:400px;
+                    max-width:1100px;
+                    padding: 0px 0px;
+                    background: white;
+        ">
+
+            <div class="navbar navbar-black">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-warning-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                </div>
+
+                <div id="header">
+
+                </div>
+
+            </div>
+
+            <div id="notificationmessages" style="padding: 20px" class="collapse">
+                <div id="info-alert" class="alert alert-dismissable alert-success collapse">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    <strong><span  id="info-alert-message"></span></strong>
+                </div>
+
+                <div id="error-alert" class="alert alert-dismissable alert-danger collapse">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    <strong><span id="error-alert-message"></span></strong>
+                </div>
+            </div>
+			
+			<c:if test="${message != null}">
+				<div id="login-error-alert" class="alert alert-dismissable alert-danger">
+					<button type="button" class="close" data-dismiss="alert">x</button>
+					<strong><span id="login-error-alert-message">${message}</span></strong>
+				</div>
+			</c:if>
+			
+			<c:if test="${pageURL != null}">
+				<input type="text" class="hidden"  id="hidden" value="${pageURL}">
+			</c:if>
+			
+            <div id="container">
+            
+            </div>
+
+            <div class="panel-footer">Build: 25 May 2016) <a href="#">Joginder Malik's App</a> <span style="float:right" id="mode"></span></div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="web/resources/frameworks/jquery-2.1.3/jquery-2.1.3.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="web/resources/frameworks/bootflat-2.0.4/js/site.min.js"></script> 
+    <script src="web/resources/frameworks/underscorejs-1.8.3/underscore.js"></script>
+    <script src="web/resources/frameworks/backbone-1.1.2/backbone.js"></script>
+
+    <script src="web/resources/frameworks/material/js/ripples.min.js"></script>
+    <script src="web/resources/frameworks/material/js/material.min.js"></script>
+    <script src="web/views/api/utils.js"></script>
+    
+    <script>
+		$(document).ready(function() {
+        	$.material.init();
+        	resetMessages();
+        	
+        	if($("#hidden").val() == 'bookTestForm'){
+        		showBookTestPage();	
+        	}
+        	if($("#hidden").val() == 'patientForm'){
+        		showRegisterPatientPage();
+        	}
+        	if($("#hidden").val() == 'loginForm'){
+        		showLogin();
+        	}
+       	});
+        </script>  
+            
+        </div>
+ 
+  </body>
+</html>

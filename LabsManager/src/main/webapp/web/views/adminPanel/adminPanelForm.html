@@ -1,0 +1,36 @@
+<form class="form-horizontal">
+                <fieldset>
+                <legend>Staff Management</legend>
+                 	<div class="panel panel-primary">
+						<div class="panel-heading">Users</div>
+						    <table class="table table-hover TreeTable" id="staffsTable">
+							    <thead>
+							      <tr>
+							        <th>Login ID</th>
+							        <th>Full Name</th>
+							        <th>Mobile</th>
+							        <th>State</th>
+							        <th>District</th>
+							        <th>Role</th>
+							        <th>Active</th>
+							        <th>Action</th>
+							      </tr>
+							    </thead>
+							    <tbody>
+							    <!-- Append table here -->
+							    </tbody>
+							</table>
+					 </div>
+                 
+                </fieldset>
+            </form>
+<script src="web/views/adminPanel/adminPanelForm.js" type="application/javascript"></script>
+<script src="web/views/api/viewmodels.js" type="application/javascript"></script>
+
+<script>
+    $(document).ready(function() {
+    	$.material.init();
+        resetMessages();
+      	loadStaffs();
+    });
+</script>

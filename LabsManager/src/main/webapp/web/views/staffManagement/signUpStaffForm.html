@@ -1,0 +1,122 @@
+<table align="center" width="100%" style="background-color:white">
+    <tr style="background-color:white">
+        <td style="padding:0px 10px 0px 10px;">
+            <form class="form-horizontal" method="POST">
+                <fieldset>
+                    <div id="registerStaff">
+                    <legend>Register your details, We will approve and inform You Soon !!!</legend>
+                    <div class="form-group">
+                        <label for="firstName" class="col-lg-2 control-label">Full Name</label>
+                        <div class="col-lg-4">
+                            <input type="text"  onfocus="resetMessages();" class="form-control" id="fullName" placeholder="Enter Full Name here..." required>
+                        </div>
+                        
+                        <label for="firstName" class="col-lg-2 control-label">Father's Name</label>
+                        <div class="col-lg-4">
+                            <input type="text"  onfocus="resetMessages();" class="form-control" id="fatherName" placeholder="Enter Father's Name here..." required>
+                        </div>
+                     </div>
+                     
+                    <div class="form-group">
+                    <label for="mobile" class="col-lg-2 control-label">Mobile</label>
+                        <div class="col-lg-4">
+                            <input type="number"  onfocus="resetMessages();" class="form-control" id="mobileNo" placeholder="Enter Mobile No. here...">
+                        </div>
+                        
+                     <label for="email" class="col-lg-2 control-label">Email Id</label>
+                        <div class="col-lg-4">
+                            <input type="email"  onfocus="resetMessages();" class="form-control" id="emailId" placeholder="Enter Email id here...">
+                            <p class="text-info"><small>(You will use this email id for Login)</small></p>
+                        </div>
+                    </div>
+                     
+                     <div class="form-group">
+                        <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                        <div class="col-lg-4">
+                            <input type="password"  name='password' onfocus="resetMessages();" class="form-control" id="inputPassword" placeholder="Password" required>
+                        </div>
+                        <label for="confirmPassword" class="col-lg-2 control-label">Confirm Password</label>
+                        <div class="col-lg-4">
+                            <input type="password"  name='password' onfocus="resetMessages();" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                       <label for="country" class="col-lg-2 control-label">Country</label>
+                        <div class="col-lg-4">
+                            <select onfocus="resetMessages();" class="form-control" id="countryId" onchange="getStateByCountryId();"></select>
+                        </div>
+                        
+                        <label for="state" class="col-lg-2 control-label">State</label>
+                        <div class="col-lg-4">
+                            <select onfocus="resetMessages();" class="form-control" id="stateId" onchange="getDistrictByStateId();">
+                             <option value="0">-- Select Country First --</option>
+                            </select>
+                        </div>
+                     </div>
+                    
+                    <div class="form-group">
+                       	 <label for="Distt" class="col-lg-2 control-label">District</label>
+                        <div class="col-lg-4">
+                            <select onfocus="resetMessages();" class="form-control" id="districtId">
+                            <option value="0">-- Select State First --</option>
+                            </select>
+                        </div>
+                      
+                        <label for="role" class="col-lg-2 control-label">Role</label>
+                      	<div class="col-lg-4">
+	                        <label class="radio-inline"><input type="radio" name="optradio" value="National">Admin</label>
+							<label class="radio-inline"><input type="radio" name="optradio" value="State" >Staff</label>
+							<label class="radio-inline"><input type="radio" name="optradio" value="District">Field Man</label>
+							<label class="radio-inline"><input type="radio" name="optradio" value="Team" >Other</label>
+                      	</div>
+                     </div>
+                     
+                     
+                  <div class="form-group">
+                        <label for="dob" class="col-lg-2 control-label">Date Of Birth</label>
+                        <div class="col-lg-4">
+                            <input type="date"  onfocus="resetMessages();" class="form-control" id="dob" >
+                        </div>
+                      	
+                     
+                        <label for="address" class="col-lg-2 control-label">Address</label>
+                        <div class="col-lg-4">
+                            <textarea rows="2" onfocus="resetMessages();" class="form-control" id="address" placeholder="Enter address here..."></textarea>
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                    	<label class="col-lg-2 control-label">Gender</label>
+                        <div class="col-lg-4 radio radio-primary">
+                         	<label><input type="radio" name="optionsRadios" id="optMale" value="male" checked="checked">Male</label>
+                            <div class="radio radio-primary">
+                                <label><input type="radio" name="optionsRadios" id="optFemale" value="female">Female</label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                        
+                    <div class="form-group">
+                        <div class="col-lg-6 col-lg-offset-1">
+                            <button type="button" onclick="registerUser();" class="btn btn-success" id="save">Register</button>
+                            <button type="button" class="btn btn-danger" id="cancel">Cancel</button>
+                        </div>
+                    </div>
+                    
+                    </div>
+                    
+                </fieldset>
+            </form>
+        </td>
+    </tr>
+</table>
+<script src="web/views/api/viewmodels.js" type="application/javascript"></script>
+<script src="web/views/shared/countryStateCity.js" type="application/javascript"></script>
+<script src="web/views/staffManagement/signUpStaffForm.js" type="application/javascript"></script>
+<script>
+    $(document).ready(function() {
+    	$.material.init();
+        resetMessages();
+        setCountryNames();
+    });
+</script>
