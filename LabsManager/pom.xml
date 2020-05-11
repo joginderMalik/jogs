@@ -6,7 +6,7 @@
 	<artifactId>LabsManager</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>LabsManager</name>
+	<name>LabsManagers</name>
 	
 	<licenses>
 		<license>
